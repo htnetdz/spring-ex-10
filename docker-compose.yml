@@ -1,0 +1,15 @@
+version: '3.5'
+services:
+    database:
+        image: mysql
+        ports:
+            - "3306:3036"
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: myDb
+            MYSQL_USER: root
+            MYSQL_PASSWORD: root
+        volumes:
+            - db-volume:/var/lib/mysql
+volumes:
+    db-volume:
